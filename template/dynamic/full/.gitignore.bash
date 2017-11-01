@@ -19,7 +19,7 @@ cat << EOF
 #!/bin/bash
 
 #---Automatically Generated from template 'bash' wrote by @aliben---
-# @Copyright (C) %CREATED_YEAR All rights reserved.
+# @Copyright (C) $CREATED_YEAR All rights reserved.
 # @name: ${1##*/}
 # @author: aliben.develop@gmail.com
 # @created_date: $CREATED_TIME
