@@ -128,7 +128,8 @@ set tags+=./tags;,~/.vim/tags/cpp_src/tags,tags
 
 " Added by Aliben for highlighting in CMakelists.txt
 au BufRead,BufNewFile CMakelists.txt,*.cmake,CMakeLists.txt set filetype=cmake
-au BufRead,BufNewFile *.yaml *.launch *.xml set filetype=xml
+au BufRead,BufNewFile *.yaml,*.launch,*.xml set filetype=xml
+autocmd BufRead,BufNewFile *.bin,*.img exec ":%!xxd"
 
 " Added by Aliben for auto importing template with *.cc *.cpp *.h *.hh *.c *.cxx
 "------------- There are some dynamic template using bash to generate
