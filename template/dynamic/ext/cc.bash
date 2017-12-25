@@ -20,13 +20,12 @@ cat << EOF
   * @date: $CREATED_YEAR
   * @author: kaiwen.hu@dorabot.com
   * @brief: TODO
-  */
+  * @version: v0.0.1
 
-/**-----------------------------------------------
   * @filename: ${1##*/}
-  * @created_date: $CREATED_TIME
+  * @create_date: $CREATED_TIME
   * @last_modified_date: NO_LAST_MODIFIED_DATE
-  *-----------------------------------------------*/
+  */
 
 //INCLUDE
 

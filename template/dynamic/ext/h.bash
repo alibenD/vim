@@ -20,6 +20,7 @@ cat << EOF
 /**-----------------------------------------------
   * @Copyright (C) $CREATED_YEAR All rights reserved.
   * @filename: ${1##*/}
+  * @version: v0.0.1
   * @author: aliben.develop@gmail.com
   * @create_date: $CREATED_TIME
   * @last_modified_date: NO_LAST_MODIFIED_DATE
