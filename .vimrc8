@@ -131,6 +131,7 @@ au BufRead,BufNewFile CMakelists.txt,*.cmake,CMakeLists.txt set filetype=cmake
 au BufRead,BufNewFile *.yaml,*.launch,*.xml set filetype=xml
 autocmd BufRead,BufNewFile *.bin,*.img exec ":%!xxd"
 autocmd BufWritePre *.h,*.hh,*.hpp,*.c,*.cc,*.cpp call UpdateModifiedDate()
+autocmd BufWritePre *.bash call UpdateModifiedDate()
 
 " Added by Aliben for auto importing template with *.cc *.cpp *.h *.hh *.c *.cxx
 "------------- There are some dynamic template using bash to generate
