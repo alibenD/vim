@@ -17,6 +17,8 @@ FILE_NAME=`echo ${1##*/}`
 
 #---Shell Command
 cat << EOF
+#ifndef $HEAD_DEF
+#define $HEAD_DEF
 /**-----------------------------------------------
   * @Copyright (C) $CREATED_YEAR All rights reserved.
   * @filename: ${1##*/}
@@ -26,8 +28,6 @@ cat << EOF
   * @description: TODO
   *-----------------------------------------------*/
 
-#ifndef $HEAD_DEF
-#define $HEAD_DEF
 
 #endif // $HEAD_DEF
 EOF

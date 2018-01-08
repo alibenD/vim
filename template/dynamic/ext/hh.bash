@@ -17,20 +17,23 @@ HEAD_DEF=`echo _${1##*/}__ | tr "a-z.-" "A-Z__"`
 
 #---Shell Command
 cat << EOF
+#ifndef $HEAD_DEF
+#define $HEAD_DEF
 /**
   * @Copyright Dorabot Inc.
   * @date: $CREATED_YEAR
   * @author: kaiwen.hu@dorabot.com
   * @brief: TODO
-  * @version: v0.0.1
 
-  * @filename: ${1##*/}
-  * @create_date: $CREATED_TIME
-  * @last_modified_date: NO_LAST_MODIFIED_DATE
+  D* @filename: ${1##*/}
+  D* @version: v0.0.1
+  D* @create_date: $CREATED_TIME
+  D* @last_modified_date: NO_LAST_MODIFIED_DATE
   */
 
-#ifndef $HEAD_DEF
-#define $HEAD_DEF
+// Header include
+
+// Declaration
 
 #endif // $HEAD_DEF
 EOF
