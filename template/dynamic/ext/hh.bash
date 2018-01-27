@@ -5,7 +5,7 @@
 # @name: hh.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-23 01:41:17
-# @last_modified_date: 2017-12-22 14:11:47
+# @last_modified_date: 2018-01-25 15:05:14
 # @description: TODO
 #---***********************************************---
 
@@ -13,7 +13,7 @@
 #---Variables
 CREATED_TIME=`date '+%Y-%m-%d %H:%M:%S'`
 CREATED_YEAR=`date '+%Y'`
-HEAD_DEF=`echo _${1##*/}__ | tr "a-z.-" "A-Z__"`
+HEAD_DEF=`echo __${1##*/}__ | tr "a-z.-" "A-Z__"`
 
 #---Shell Command
 cat << EOF
@@ -25,15 +25,14 @@ cat << EOF
   * @author: kaiwen.hu@dorabot.com
   * @brief: TODO
 
-  D* @filename: ${1##*/}
-  D* @version: v0.0.1
-  D* @create_date: $CREATED_TIME
-  D* @last_modified_date: NO_LAST_MODIFIED_DATE
+  * @filename: ${1##*/}
+  * @version: v0.0.1
+  * @create_date: $CREATED_TIME
+  * @last_modified_date: NO_LAST_MODIFIED_DATE
   */
 
 // Header include
 
 // Declaration
-
 #endif // $HEAD_DEF
 EOF

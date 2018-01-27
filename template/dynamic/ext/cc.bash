@@ -4,7 +4,7 @@
 # @name: cc.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-23 00:01:59
-# @last_modified_date: 2017-10-23 01:38:33
+# @last_modified_date: 2018-01-27 14:56:07
 # @description: Generate a template for new bash file
 #---***********************************************---
 
