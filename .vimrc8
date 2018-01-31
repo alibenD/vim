@@ -126,10 +126,10 @@ let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]"]"
 set tags+=./tags;,~/.vim/tags/cpp_src/tags,~/.vim/systags,tags
 
 " Added by Aliben for highlighting in CMakelists.txt
-au BufRead,BufNewFile CMakelists.txt,*.cmake,CMakeLists.txt set filetype=cmake
+au BufRead,BufNewFile cmakelists.txt,Cmakelist.txt,CMakelists.txt,*.cmake,CMakeLists.txt set filetype=cmake
 au BufRead,BufNewFile *.yaml,*.launch,*.xml set filetype=xml
 autocmd BufRead,BufNewFile *.bin,*.img exec ":%!xxd"
-autocmd BufWritePre *.h,*.hh,*.hpp,*.c,*.cc,*.cpp,*.[cC][mM]ake[lL]ist(s)?.txt call UpdateModifiedDate()
+autocmd BufWritePre *.h,*.hh,*.hpp,*.c,*.cc,*.cpp,CMakeLists.txt call UpdateModifiedDate()
 autocmd BufWritePre *.bash,*.sh call UpdateModifiedDate()
 
 " Added by Aliben for auto importing template with *.cc *.cpp *.h *.hh *.c *.cxx

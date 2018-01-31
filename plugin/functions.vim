@@ -47,6 +47,8 @@ let s:originPoint = [0,3,0,0]
       call setline(lineNumberSearch, '  * @last_modified_date: ' . currentTime)
     elseif expand("%:t") == 'makefile'
       call setline(lineNumberSearch, '# @last_modified_date: ' . currentTime)
+    elseif expand("%:t") == 'CMakeLists.txt'
+      call setline(lineNumberSearch, '# @last_modified_date: ' . currentTime)
     elseif expand("%:t") == '.gitignore'
       call setline(lineNumberSearch, '# @last_modified_date: ' . currentTime)
     endif

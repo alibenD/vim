@@ -5,7 +5,7 @@
 # @name: makefile.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-23 10:37:14
-# @last_modified_date: 2017-10-24 15:31:44
+# @last_modified_date: 2018-01-31 14:19:05
 # @description: Generate a template for a new makefile
 #---***********************************************---
 
