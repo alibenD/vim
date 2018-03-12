@@ -129,7 +129,7 @@ set tags+=./tags;,~/.vim/tags/cpp_src/tags,~/.vim/systags,tags
 au BufRead,BufNewFile cmakelists.txt,Cmakelist.txt,CMakelists.txt,*.cmake,CMakeLists.txt set filetype=cmake
 au BufRead,BufNewFile *.yaml,*.launch,*.xml,*.xacro set filetype=xml
 autocmd BufRead,BufNewFile *.bin,*.img exec ":%!xxd"
-autocmd BufWritePre *.h,*.hh,*.hpp,*.c,*.cc,*.cpp,CMakeLists.txt call UpdateModifiedDate()
+autocmd BufWritePre *.h,*.hh,*.hpp,*.c,*.cc,*.cpp,CMakeLists.txt,*.yml call UpdateModifiedDate()
 autocmd BufWritePre *.bash,*.sh call UpdateModifiedDate()
 
 " Added by Aliben for auto importing template with *.cc *.cpp *.h *.hh *.c *.cxx

@@ -1,11 +1,12 @@
 #!/bin/bash
-#---Generated from template 'bash' wrote by @aliben---
-# 
-# @name: bashnew.bash
+
+#---Automatically Generated from template 'bash' wrote by @aliben---
+# @Copyright (C) 2018 All rights reserved.
+# @name: yml.bash
 # @author: aliben.develop@gmail.com
-# @created_date: 2017-10-21 17:42:35
-# @last_modified_date: 2018-03-09 16:51:29
-# @description: Generate a template for new bash file
+# @created_date: 2018-03-09 16:50:22
+# @last_modified_date: 2018-03-09 16:51:27
+# @description: TODO
 #---***********************************************---
 
 
@@ -13,12 +14,9 @@
 CREATED_TIME=`date '+%Y-%m-%d %H:%M:%S'`
 CREATED_YEAR=`date '+%Y'`
 
-
 #---Shell Command
 cat << EOF
-#!/bin/bash
-
-#---Automatically Generated from template 'bash' wrote by @aliben---
+#---Automatically Generated from template 'yml.bash' wrote by @aliben---
 # @Copyright (C) $CREATED_YEAR All rights reserved.
 # @name: ${1##*/}
 # @author: aliben.develop@gmail.com
@@ -27,10 +25,5 @@ cat << EOF
 # @description: TODO
 #---***********************************************---
 
-
-#---Variables
-CREATED_TIME=\`date '+%Y-%m-%d %H:%M:%S'\`
-CREATED_YEAR=\`date '+%Y'\`
-
-#---Shell Command
+#---YAML Content----
 EOF
