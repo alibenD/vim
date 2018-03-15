@@ -10,3 +10,9 @@
 [submodule "bundle/Auto-Pairs"]
 	path = bundle/Auto-Pairs
 	url = https://github.com/vim-scripts/Auto-Pairs.git
+[submodule "bundle/echofunc"]
+	path = bundle/echofunc
+	url = https://github.com/vim-plugins/echofunc.git
+[submodule "bundle/cmake.vim-syntax"]
+	path = bundle/cmake.vim-syntax
+	url = https://github.com/vim-scripts/cmake.vim-syntax.git
