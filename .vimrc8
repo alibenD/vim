@@ -127,7 +127,8 @@ set tags+=./tags;,~/.vim/tags/cpp_src/tags,~/.vim/systags,tags
 
 " Added by Aliben for highlighting in CMakelists.txt
 au BufRead,BufNewFile cmakelists.txt,Cmakelist.txt,CMakelists.txt,*.cmake,CMakeLists.txt set filetype=cmake
-au BufRead,BufNewFile *.yaml,*.yml,*.launch,*.xml,*.xacro set filetype=xml
+au BufRead,BufNewFile *.launch,*.xml,*.xacro set filetype=xml
+au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/plugin/yaml.vim
 autocmd BufRead,BufNewFile *.bin,*.img exec ":%!xxd"
 autocmd BufWritePre *.h,*.hh,*.hpp,*.c,*.cc,*.cpp,CMakeLists.txt,*.yml call UpdateModifiedDate()
 autocmd BufWritePre *.bash,*.sh call UpdateModifiedDate()
