@@ -5,8 +5,8 @@
 # @name: yml.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2018-03-09 16:50:22
-# @last_modified_date: 2018-03-09 16:51:27
-# @description: TODO
+# @last_modified_date: 2018-05-21 20:00:03
+# @brief: TODO
 #---***********************************************---
 
 
@@ -22,7 +22,7 @@ cat << EOF
 # @author: aliben.develop@gmail.com
 # @created_date: $CREATED_TIME
 # @last_modified_date: NO_LAST_MODIFIED_DATE
-# @description: TODO
+# @brief: TODO
 #---***********************************************---
 
 #---YAML Content----

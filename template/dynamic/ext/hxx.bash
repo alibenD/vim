@@ -4,8 +4,8 @@
 # @name: hxx.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-23 01:14:10
-# @last_modified_date: 2018-01-25 15:08:10
-# @description: TODO
+# @last_modified_date: 2018-05-21 20:00:24
+# @brief: TODO
 #---***********************************************---
 
 
@@ -21,11 +21,13 @@ cat << EOF
 #define $HEAD_DEF
 /**-----------------------------------------------
   * @Copyright (C) $CREATED_YEAR All rights reserved.
-  * @filename: ${1##*/}
+  * @date: $CREATED_YEAR
   * @author: aliben.develop@gmail.com
+  * @brief: TODO
+  * @version: v0.0.1
+  * @file: ${1##*/}
   * @create_date: $CREATED_TIME
   * @last_modified_date: NO_LAST_MODIFIED_DATE
-  * @description: TODO
   *-----------------------------------------------*/
 
 // INCLUDE

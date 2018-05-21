@@ -4,8 +4,8 @@
 # @name: c.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-23 01:01:33
-# @last_modified_date: 2017-10-24 00:52:11
-# @description: Generate a template for a new c
+# @last_modified_date: 2018-05-21 20:01:10
+# @brief: Generate a template for a new c
 #---***********************************************---
 
 
@@ -18,12 +18,12 @@ CREATED_YEAR=`date '+%Y'`
 cat << EOF
 /**-----------------------------------------------
   * @Copyright (C) $CREATED_YEAR All rights reserved.
-  * @filename: ${1##*/}
+  * @file: ${1##*/}
   * @version: v0.0.1
   * @author: aliben.develop@gmail.com
   * @created_date: $CREATED_TIME
   * @last_modified_date: NO_LAST_MODIFIED_DATE
-  * @description: TODO
+  * @brief: TODO
   *-----------------------------------------------*/
 
 //INCLUDE

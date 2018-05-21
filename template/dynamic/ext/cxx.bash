@@ -4,8 +4,8 @@
 # @name: cxx.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-23 01:01:33
-# @last_modified_date: 2017-10-23 01:38:21
-# @description: TODO
+# @last_modified_date: 2018-05-21 20:00:53
+# @brief: TODO
 #---***********************************************---
 
 
@@ -18,12 +18,13 @@ CREATED_YEAR=`date '+%Y'`
 cat << EOF
 /**-----------------------------------------------
   * @Copyright (C) $CREATED_YEAR All rights reserved.
-  * @filename: ${1##*/}
-  * @version: v0.0.1
+  * @date: $CREATED_YEAR
   * @author: aliben.develop@gmail.com
-  * @created_date: $CREATED_TIME
+  * @brief: TODO
+  * @version: v0.0.1
+  * @file: ${1##*/}
+  * @create_date: $CREATED_TIME
   * @last_modified_date: NO_LAST_MODIFIED_DATE
-  * @description: TODO
   *-----------------------------------------------*/
 
 //INCLUDE

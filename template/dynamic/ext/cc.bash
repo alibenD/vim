@@ -4,8 +4,8 @@
 # @name: cc.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-23 00:01:59
-# @last_modified_date: 2018-01-27 14:56:07
-# @description: Generate a template for new bash file
+# @last_modified_date: 2018-05-21 20:01:05
+# @brief: Generate a template for new bash file
 #---***********************************************---
 
 
@@ -21,8 +21,7 @@ cat << EOF
   * @author: kaiwen.hu@dorabot.com
   * @brief: TODO
   * @version: v0.0.1
-
-  * @filename: ${1##*/}
+  * @file: ${1##*/}
   * @create_date: $CREATED_TIME
   * @last_modified_date: NO_LAST_MODIFIED_DATE
   */

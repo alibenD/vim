@@ -5,8 +5,8 @@
 # @name: hh.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-23 01:41:17
-# @last_modified_date: 2018-01-25 15:05:14
-# @description: TODO
+# @last_modified_date: 2018-05-21 20:00:39
+# @brief: TODO
 #---***********************************************---
 
 
@@ -24,8 +24,7 @@ cat << EOF
   * @date: $CREATED_YEAR
   * @author: kaiwen.hu@dorabot.com
   * @brief: TODO
-
-  * @filename: ${1##*/}
+  * @file: ${1##*/}
   * @version: v0.0.1
   * @create_date: $CREATED_TIME
   * @last_modified_date: NO_LAST_MODIFIED_DATE
