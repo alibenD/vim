@@ -67,7 +67,8 @@ cat << EOF
   #COMPILER
     CC=gcc
   #COMPILER_FLAG
-    CCFLAG=-Wall
+    CCFLAG=-Wall -g
+    
     INCLUDEFLAG=-I${INCLUDE_DIR}
 
   #DIRECTORY
@@ -125,16 +126,16 @@ all: all_obj \$(TARGET_BIN_LIST) \$(TEST_OBJECT_LIST) \$(TEST_BIN_LIST)
 all_obj: \$(TARGET_OBJECT_LIST)
 
 \$(TARGET_OBJECT_LIST): %.o : %.c
-	\$(CC) \$(CCFLAG) -o \$(OBJECT_DIR)\$@ -c \$< \$(INCLUDEFLAG)
+	\$(CC) \$(CCFLAG) -c \$< \$(INCLUDEFLAG) -o \$(OBJECT_DIR)\$@
 
 \$(TEST_OBJECT_LIST): %.o : %.c
-	\$(CC) \$(CCFLAG) -o \$(OBJECT_DIR)\$@ -c \$< \$(INCLUDEFLAG)
+	\$(CC) \$(CCFLAG) -c \$< \$(INCLUDEFLAG) -o \$(OBJECT_DIR)\$@
 
 \$(TARGET_BIN_LIST): %: %.o 
-	\$(CC) \$(CCFLAG)  -o \$(BINARY_DIR)\$@ \$(OBJECT_DIR)\$<  \$(OBJECT_DIR)\$(DEP) \$(INCLUDEFLAG)
+	\$(CC) \$(CCFLAG) \$(OBJECT_DIR)\$<  \$(OBJECT_DIR)\$(DEP) -o \$(BINARY_DIR)\$@ \$(INCLUDEFLAG)
 
 \$(TEST_BIN_LIST): %: %.o
-  \$(CC) \$(CCFLAG) -o \$(BINARY_DIR)\$@ \$(OBJECT_DIR)\$< \$(OBJECT_DIR)\$(OBJECT_LIST) \$(INCLUDEFLAG)
+  \$(CC) \$(OBJECT_DIR)\$< \$(OBJECT_DIR)\$(OBJECT_LIST) \$(INCLUDEFLAG) -o \$(BINARY_DIR)\$@
 
 .PHONY: clean
 
