@@ -7,6 +7,9 @@
     " options, so any other options should be set AFTER setting 'compatible'.
     set nocompatible
 
+    " Fixed delete
+    set backspace=2
+
   "--pathogen setting--
   execute pathogen#infect()
   syntax on
