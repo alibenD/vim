@@ -5,7 +5,7 @@
 # @name: makefile.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-23 10:37:14
-# @last_modified_date: 2018-05-31 14:25:44
+# @last_modified_date: 2018-06-08 22:24:02
 # @description: Generate a template for a new makefile
 #---***********************************************---
 
@@ -67,7 +67,7 @@ cat << EOF
   #COMPILER
     CC=gcc
   #COMPILER_FLAG
-    CCFLAG=-Wall -g
+    CCFLAG=-Wall
     
     INCLUDEFLAG=-I${INCLUDE_DIR}
 
@@ -121,7 +121,7 @@ cat << EOF
 #----------------------------------------------------------------------
 #TARGET
 
-all: all_obj \$(TARGET_BIN_LIST) \$(TEST_OBJECT_LIST) \$(TEST_BIN_LIST)
+all: check_build all_obj \$(TARGET_BIN_LIST) \$(TEST_OBJECT_LIST) \$(TEST_BIN_LIST)
 
 all_obj: \$(TARGET_OBJECT_LIST)
 
@@ -135,11 +135,15 @@ all_obj: \$(TARGET_OBJECT_LIST)
 	\$(CC) \$(CCFLAG) \$(OBJECT_DIR)\$<  \$(OBJECT_DIR)\$(DEP) -o \$(BINARY_DIR)\$@ \$(INCLUDEFLAG)
 
 \$(TEST_BIN_LIST): %: %.o
-  \$(CC) \$(OBJECT_DIR)\$< \$(OBJECT_DIR)\$(OBJECT_LIST) \$(INCLUDEFLAG) -o \$(BINARY_DIR)\$@
+	\$(CC) \$(OBJECT_DIR)\$< \$(OBJECT_DIR)\$(OBJECT_LIST) \$(INCLUDEFLAG) -o \$(BINARY_DIR)\$@
 
-.PHONY: clean
+.PHONY: clean check_build
+
+check_build:
+	if [ ! -e build ]; then mkdir -p build/bin build/obj; fi
 
 clean:
 	rm -rf `echo '${OBJECT_BUILD_FILE_LIST}'`
 	rm -rf `echo '${BINARY_BUILD_FILE_LIST}'`
+	rm -rf `echo '${BUILD_DIR}'`
 EOF
