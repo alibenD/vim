@@ -47,6 +47,7 @@
     set autowrite        " 自动把内容写回文件: 如果文件被修改过，在每个 :next、:rewind、:last、:first、:previous、:stop、:suspend、:tag、:!、:make、CTRL-] 和 CTRL-^命令时进行；用 :buffer、CTRL-O、CTRL-I、'{A-Z0-9} 或 `{A-Z0-9} 命令转到别的文件时亦然。
     set autoindent        " 设置自动对齐(缩进)：即每行的缩进值与上一行相等；使用 noautoindent 取消设置
     "set smartindent        " 智能对齐方式
+    set cursorline
     set expandtab          " replace tab with spaces
     set list            " enable tab and space show
     set tabstop=2        " 设置制表符(tab键)的宽度
