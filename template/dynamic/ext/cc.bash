@@ -4,7 +4,7 @@
 # @name: cc.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-23 00:01:59
-# @last_modified_date: 2018-05-21 20:01:05
+# @last_modified_date: 2018-07-31 15:48:05
 # @brief: Generate a template for new bash file
 #---***********************************************---
 
@@ -16,9 +16,9 @@ CREATED_YEAR=`date '+%Y'`
 #---Shell Command
 cat << EOF
 /**
-  * @Copyright Dorabot Inc.
+  * @Copyright (C) $CREATED_YEAR All rights reserved.
   * @date: $CREATED_YEAR
-  * @author: kaiwen.hu@dorabot.com
+  * @author: aliben.develop@gmail.com
   * @brief: TODO
   * @version: v0.0.1
   * @file: ${1##*/}

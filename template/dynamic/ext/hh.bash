@@ -5,7 +5,7 @@
 # @name: hh.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-23 01:41:17
-# @last_modified_date: 2018-05-21 20:00:39
+# @last_modified_date: 2018-07-31 15:47:55
 # @brief: TODO
 #---***********************************************---
 
@@ -20,9 +20,9 @@ cat << EOF
 #ifndef $HEAD_DEF
 #define $HEAD_DEF
 /**
-  * @Copyright Dorabot Inc.
+  * @Copyright (C) $CREATED_YEAR All rights reserved.
   * @date: $CREATED_YEAR
-  * @author: kaiwen.hu@dorabot.com
+  * @author: aliben.develop@gmail.com
   * @brief: TODO
   * @file: ${1##*/}
   * @version: v0.0.1
