@@ -4,7 +4,7 @@
 # @name: sh.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-21 18:06:14
-# @last_modified_date: 2018-05-21 20:00:17
+# @last_modified_date: 2018-07-31 16:36:49
 # @brief: TODO
 #---***********************************************---
 
@@ -18,7 +18,7 @@ cat << EOF
 #!/bin/sh
 #---Generated from template 'sh' wrote by @aliben---
 # @Copyright (C) $CREATED_YEAR All rights reserved.
-# @name: ${1##*/}
+# @file: ${1##*/}
 # @author: aliben.develop@gmail.com
 # @created_date: $CREATED_TIME
 # @last_modified_date: NO_LAST_MODIFIED_DATE

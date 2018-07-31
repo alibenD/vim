@@ -5,7 +5,7 @@
 # @name: hh.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-23 01:41:17
-# @last_modified_date: 2018-07-31 15:47:55
+# @last_modified_date: 2018-07-31 16:36:08
 # @brief: TODO
 #---***********************************************---
 
@@ -22,12 +22,12 @@ cat << EOF
 /**
   * @Copyright (C) $CREATED_YEAR All rights reserved.
   * @date: $CREATED_YEAR
-  * @author: aliben.develop@gmail.com
-  * @brief: TODO
   * @file: ${1##*/}
   * @version: v0.0.1
+  * @author: aliben.develop@gmail.com
   * @create_date: $CREATED_TIME
   * @last_modified_date: NO_LAST_MODIFIED_DATE
+  * @brief: TODO
   */
 
 // Header include

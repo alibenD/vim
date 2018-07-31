@@ -4,7 +4,7 @@
 # @name: cc.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-23 00:01:59
-# @last_modified_date: 2018-07-31 15:48:05
+# @last_modified_date: 2018-07-31 16:35:33
 # @brief: Generate a template for new bash file
 #---***********************************************---
 
@@ -18,12 +18,12 @@ cat << EOF
 /**
   * @Copyright (C) $CREATED_YEAR All rights reserved.
   * @date: $CREATED_YEAR
-  * @author: aliben.develop@gmail.com
-  * @brief: TODO
-  * @version: v0.0.1
   * @file: ${1##*/}
+  * @version: v0.0.1
+  * @author: aliben.develop@gmail.com
   * @create_date: $CREATED_TIME
   * @last_modified_date: NO_LAST_MODIFIED_DATE
+  * @brief: TODO
   */
 
 //INCLUDE
