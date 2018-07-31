@@ -4,7 +4,7 @@
 # @name: h.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-23 01:14:10
-# @last_modified_date: 2018-07-31 16:35:59
+# @last_modified_date: 2018-07-31 16:40:17
 # @brief: TODO
 #---***********************************************---
 
@@ -28,6 +28,7 @@ cat << EOF
   * @create_date: $CREATED_TIME
   * @last_modified_date: NO_LAST_MODIFIED_DATE
   * @brief: TODO
+  * @detail: TODO
   *-----------------------------------------------*/
 
 // INCLUDE
