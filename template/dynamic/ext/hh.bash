@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #---Automatically Generated from template 'bash' wrote by @aliben---
-# @Copyright (C) %CREATED_YEAR All rights reserved.
+# @Copyright (C) 2018 All rights reserved.
 # @name: hh.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-23 01:41:17
-# @last_modified_date: 2018-07-31 22:37:24
+# @last_modified_date: 2018-08-15 08:14:59
 # @brief: TODO
 #---***********************************************---
 

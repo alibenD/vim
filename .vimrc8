@@ -90,7 +90,8 @@
   set foldmethod=indent
   set foldlevel=99
   set foldcolumn=5
-  nnoremap <space> za
+
+nnoremap <space> za
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
@@ -113,6 +114,7 @@ map <C-n> :NERDTreeToggle<CR>
   map <C-6> :b 6<CR>
   map <C-7> :b 7<CR>
   map <C-8> :b 8<CR>
+  map <C-9> :b 9<CR>
 
 "---Shortcut for  Update Modified Time---
 map <C-u> :call UpdateModifiedDate()<CR>
