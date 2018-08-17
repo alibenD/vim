@@ -5,7 +5,7 @@
 # @name: yml.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2018-03-09 16:50:22
-# @last_modified_date: 2018-07-31 22:38:24
+# @last_modified_date: 2018-08-17 18:20:36
 # @brief: TODO
 #---***********************************************---
 
@@ -16,6 +16,7 @@ CREATED_YEAR=`date '+%Y'`
 
 #---Shell Command
 cat << EOF
+%YAML:1.0
 #---Automatically Generated from template 'yml.bash' wrote by @aliben---
 # @Copyright (C) $CREATED_YEAR All rights reserved.
 # @file: ${1##*/}
