@@ -5,7 +5,7 @@
 # @name: cmakelists.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2018-01-31 13:47:34
-# @last_modified_date: 2018-10-20 22:36:58
+# @last_modified_date: 2018-11-13 16:21:17
 # @description: TODO
 #---***********************************************---
 
@@ -13,7 +13,7 @@
 #---Variables
 CREATED_TIME=`date '+%Y-%m-%d %H:%M:%S'`
 CREATED_YEAR=`date '+%Y'`
-PROJECT_NAME="NEED_TO_FILL"
+PROJECT_NAME=$1
 
 #---Shell Command
 cat << EOF
@@ -40,20 +40,20 @@ project(${PROJECT_NAME})
     SET(CMAKE_BUILD_TYPE RELEASE)
   ENDIF()
 
+  SET(CMAKE_VERBOSE_MAKEFILE OFF)
   SET(CMAKE_CXX_STANDARD 11)
+  SET(CMAKE_CXX_FLAGS "\${CMAKE_CXX_FLAGS} -Wall -Werror -std=c++14 -Wextra -Wno-deprecated-register -Wno-deprecated-declarations -Wno-unused-private-field -Wno-unused-parameter -Qunused-arguments -fcolor-diagnostics -ftemplate-backtrace-limit=0")
+  #SET(CMAKE_CXX_FLAGS "\${CMAKE_CXX_FLAGS} -Wall -Werror -std=c++14 -Wextra -Wno-deprecated-register -Wno-deprecated-declarations -Qunused-arguments -fcolor-diagnostics -ftemplate-backtrace-limit=0")
   # Cross-platform check
   IF("\${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
-    SET(CMAKE_CXX_FLAGS_DEBUG "-O0 -g")
-    SET(CMAKE_CXX_FLAGS_RELEASE "-O3")
-    SET(CMAKE_CXX_FLAGS "\${CMAKE_CXX_FLAGS} -Wall -Werror -std=c++14 -Wextra -Wno-deprecated-register -Wno-deprecated-register -Qunused-arguments -fcolor-diagnostics")
+    SET(CMAKE_CXX_FLAGS_DEBUG "\${CMAKE_CXX_FLAGS} -O0 -g")
+    SET(CMAKE_CXX_FLAGS_RELEASE "\${CMAKE_CXX_FLAGS} -O3")
   ELSEIF(CMAKE_HOST_APPLE)
-    SET(CMAKE_CXX_FLAGS_RELEASE "-O3")
-    SET(CMAKE_CXX_FLAGS_DEBUG "-O0 -g")
-    SET(CMAKE_CXX_FLGAS "\${CMAKE_CXX_FLAGS} -Wall -Werror -Wextra -std=c++15 -Wno-deprecated-decalarations")
+    SET(CMAKE_CXX_FLAGS_RELEASE "\${CMAKE_CXX_FLAGS} -O3")
+    SET(CMAKE_CXX_FLAGS_DEBUG "\${CMAKE_CXX_FLAGS} -O0 -g")
   ELSEIF("\${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
     SET(CMAKE_CXX_FLAGS_DEBUG "-O0 -g")
     SET(CMAKE_CXX_FLAGS_RELEASE "-O3")
-    SET(CMAKE_CXX_FLAGS "\${CMAKE_CXX_FLAGS} -Wall -Werror -Wextra -std=c++14 -Wno-deprecated-decalarations -ftemplate-backtrace-limit=0")
     SET(CMAKE_EXE_LINKER_FLAGS_COVERAGE "\${CMAKE_EXE_LINKER_FLAGS_DEBUG}" --coverage)
     SET(CMAKE_SHARED_LINKER_FLAGS_COVERAGE "\${CMAKE_SHARED_LINKER_FLAGS_DEBUG}" --coverage)
   ELSEIF(CMAKE_CXX_COMPILER_ID MATCHES "^MSVC$")
