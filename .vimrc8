@@ -27,6 +27,7 @@
       "Plug 'w0rp/ale'
       Plug 'octol/vim-cpp-enhanced-highlight'
       Plug 'nathanaelkane/vim-indent-guides'
+      Plug 'nickhutchinson/vim-cmake-syntax'
     call plug#end()
 
     " ALE setup
