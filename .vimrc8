@@ -24,7 +24,9 @@
       Plug 'tpope/vim-fugitive'
       Plug 'gregsexton/gitv'
       Plug 'terryma/vim-smooth-scroll'
-      Plug 'w0rp/ale'
+      "Plug 'w0rp/ale'
+      Plug 'octol/vim-cpp-enhanced-highlight'
+      Plug 'nathanaelkane/vim-indent-guides'
     call plug#end()
 
     " ALE setup
@@ -67,14 +69,31 @@
     "call vundle#end()
 
     " YouCompleteMe setup
-    "let g:ycm_global_ycm_extra_conf=‘~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py‘
+    let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+    let g:enable_ycm_at_startup = 1
+    let g:ycm_python_binary_path = 'python3'
     " after 2 chars complete
     let g:ycm_min_num_identifier_candidate_chars = 2
+    let g:ycm_enable_diagnostic_signs = 0
+    let g:ycm_enable_diagnostic_highlighting = 0
+    let g:ycm_confirm_extra_conf = 0
+    let g:ycm_cache_omnifunc=0
+    let g:ycm_server_keep_logfiles = 1
 
     "--pathogen setting--
     "execute pathogen#infect()
     "syntax on
     "filetype plugin indent on
+    
+    " Indent display
+    " 随 vim 自启动
+    let g:indent_guides_enable_on_vim_startup=1
+    " 从第二层开始可视化显示缩进
+    let g:indent_guides_start_level=2
+    " 色块宽度
+    let g:indent_guides_guide_size=1
+    " 快捷键 i 开/关缩进可视化
+    :nmap <silent> <Leader>i <Plug>IndentGuidesToggle
 
     " Fixed delete
     set backspace=2
