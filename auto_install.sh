@@ -4,7 +4,7 @@
 # @file: auto_install.sh
 # @author: aliben.develop@gmail.com
 # @created_date: 2018-11-20 21:08:35
-# @last_modified_date: 2018-11-20 22:20:07
+# @last_modified_date: 2018-11-20 22:21:45
 # @brief: TODO
 # @details: TODO
 #---***********************************************---
@@ -16,6 +16,6 @@ CREATED_YEAR=`date '+%Y'`
 
 #---Shell Command
 #brew install vim --with-python --with-ruby --with-perl --with-features=huge --with-lua
-ln -s ./.vimrc8 $HOME/.vimrc
+ln -s .vimrc8 $HOME/.vimrc
 vim +PlugInstall +qall
 python ./bundle/YouCompleteMe/install.py --clang-completer
