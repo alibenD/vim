@@ -32,14 +32,14 @@
 
     " ALE setup
     "let g:ale_completion_enable=1
-    let g:ale_sign_error = '✗'
-    let g:ale_sign_warning = '⚡'
-    let g:ale_lint_on_text_changed = 'normal'
-    let g:ale_lint_on_insert_leave = 1
-    let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
-    let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++14'
-    let g:ale_c_cppcheck_options = ''
-    let g:ale_cpp_cppcheck_options = ''
+    "let g:ale_sign_error = '✗'
+    "let g:ale_sign_warning = '⚡'
+    "let g:ale_lint_on_text_changed = 'normal'
+    "let g:ale_lint_on_insert_leave = 1
+    "let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
+    "let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++14'
+    "let g:ale_c_cppcheck_options = ''
+    "let g:ale_cpp_cppcheck_options = ''
     "let g:ale_sign_column_always = 1
     "let g:airline#extensions#ale#enabled = 1
     "let g:ale_statusline_format = ['✗ %d', '⚡%d', '⬥ ok']
@@ -90,7 +90,7 @@
     " 随 vim 自启动
     let g:indent_guides_enable_on_vim_startup=1
     " 从第二层开始可视化显示缩进
-    let g:indent_guides_start_level=2
+    let g:indent_guides_start_level=1
     " 色块宽度
     let g:indent_guides_guide_size=1
     " 快捷键 i 开/关缩进可视化

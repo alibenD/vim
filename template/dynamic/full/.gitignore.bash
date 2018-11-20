@@ -5,7 +5,7 @@
 # @name: gitignore.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-11-01 18:18:27
-# @last_modified_date: 2018-11-13 16:58:51
+# @last_modified_date: 2018-11-20 15:45:57
 # @description: TODO
 #---***********************************************---
 
@@ -37,6 +37,7 @@ doc
 *.o
 *.a
 .idea
+.DS_Store
 
 
 #DON NOT IGNORE LIST

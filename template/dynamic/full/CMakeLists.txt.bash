@@ -5,7 +5,7 @@
 # @name: cmakelists.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2018-01-31 13:47:34
-# @last_modified_date: 2018-11-13 16:21:17
+# @last_modified_date: 2018-11-20 16:50:10
 # @description: TODO
 #---***********************************************---
 
@@ -75,6 +75,8 @@ project(${PROJECT_NAME})
   LIST(APPEND CMAKE_MODULE_PATH \${PROJECT_SOURCE_DIR}/cmake_modules)
 # Find *Config.cmake
   # Example: find_package(OpenCV REQUIRED)
+  find_package(OpenCV)
+  find_package(Eigen3)
 
 # Set&Add INCLUDE PATH
   # Example: SET ( VPATH_NAME PATH )
@@ -82,11 +84,18 @@ project(${PROJECT_NAME})
   INCLUDE_DIRECTORIES(\${PROJECT_SOURCE_DIR}/include)
   INCLUDE_DIRECTORIES(\${PROJECT_SOURCE_DIR}/build/include)
   INCLUDE_DIRECTORIES(\${CMAKE_INSTALL_PREFIX}/include)
+  INCLUDE_DIRECTORIES(\${OPENCV_INCLUDE_DIRS})
+  INCLUDE_DIRECTORIES(\${EIGEN3_INCLUDE_DIRS})
 
 # Set&Add LIB PATH/LINKING_DIRECTORIES
   # Example: LINK_DIRECTORIES(\${CMAKE_INSTALL_PREFIX}/lib)
   LINK_DIRECTORIES(\${CMAKE_INSTALL_PREFIX}/lib)
   LINK_DIRECTORIES(\${PROJECT_SOURCE_DIR}/lib)
+
+  SET( THIRD_PARTY_LIBS
+    \${OpenCV_LIBS}
+  )
+
 
 # Set Subdir(src)
   ADD_SUBDIRECTORY(src)

@@ -5,7 +5,7 @@
 # @name: cmakelists.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2018-01-31 13:47:34
-# @last_modified_date: 2018-11-13 16:15:45
+# @last_modified_date: 2018-11-20 18:24:15
 # @description: TODO
 #---***********************************************---
 
@@ -27,12 +27,12 @@ cat << EOF
 # @description: TODO
 #---****************************************************************---
 
-FILE(GLOB TYPES_HEADERS
+FILE(GLOB_RECURSE HEADERS
   ../include/$PROJECT_NAME/*/*.h*
   ../include/$PROJECT_NAME/*.h*
   )
-FILE(GLOB SOURCES *.cc)
+FILE(GLOB_RECURSE SOURCES *.cc)
 
-ADD_LIBRARY($PROJECT_NAME SHARED \${TYPES_HEADERS} \${SOURCES})
+ADD_LIBRARY($PROJECT_NAME SHARED \${HEADERS} \${SOURCES})
 TARGET_LINK_LIBRARIES($PROJECT_NAME \${THIRD_PARTY_LIBS})
 EOF
