@@ -14,7 +14,7 @@ $ git clone -b vundle https://github.com/alibenD/vim ~/.vim
 
 2. Run `auto_install.sh` to install vim plugin(s) and setup local vim configuration.
 ```
-$ ./auto_install.sh
+$ bash ~/.vim/auto_install.sh
 ```
 
 -----------------
