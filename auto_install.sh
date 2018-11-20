@@ -4,7 +4,7 @@
 # @file: auto_install.sh
 # @author: aliben.develop@gmail.com
 # @created_date: 2018-11-20 21:08:35
-# @last_modified_date: 2018-11-20 22:23:58
+# @last_modified_date: 2018-11-20 22:38:19
 # @brief: TODO
 # @details: TODO
 #---***********************************************---
@@ -20,4 +20,6 @@ set -x
 mv $HOME/.vimrc $HOME/.vimrc_old
 ln -s `pwd`/.vimrc8 $HOME/.vimrc
 vim +PlugInstall +qall
+cd bundle/YouCompleteMe/ && git submodule update --init --recursive
+cd ~/.vim
 python ./bundle/YouCompleteMe/install.py --clang-completer
