@@ -1,10 +1,10 @@
 #!/bin/bash
 #---Generated from template 'bash' wrote by @aliben---
 # 
-# @name: bashnew.bash
+# @name: run_test.bash
 # @author: aliben.develop@gmail.com
-# @created_date: 2017-10-21 17:42:35
-# @last_modified_date: 2019-01-11 16:28:26
+# @created_date: 2019-01-11 16:27:03
+# @last_modified_date: 2019-01-11 16:30:00
 # @brief: Generate a template for new bash file
 #---***********************************************---
 
@@ -36,6 +36,5 @@ CREATED_YEAR=\`date '+%Y'\`
 #---Shell Command
 set -x
 cd build
-cmake ..
-make -j7
+make test
 EOF
