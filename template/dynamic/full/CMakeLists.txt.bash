@@ -5,7 +5,7 @@
 # @name: cmakelists.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2018-01-31 13:47:34
-# @last_modified_date: 2019-01-11 14:54:12
+# @last_modified_date: 2019-01-11 15:56:01
 # @description: TODO
 #---***********************************************---
 
@@ -38,6 +38,9 @@ project(${PROJECT_NAME})
   # Build type default
   IF(NOT CMAKE_BUILD_TYPE)
     SET(CMAKE_BUILD_TYPE RELEASE)
+  ENDIF()
+  IF(CMAKE_BUILD_TYPE STREQUAL "RELEASE")
+    ADD_DEFINITIONS(-DNDEBUG)
   ENDIF()
 
   OPTION(BUILD_GTESTS "Build google test cases" ON)
@@ -85,9 +88,9 @@ project(${PROJECT_NAME})
     find_package(GTEST REQUIRED)
     find_package(Threads REQUIRED)
     INCLUDE_DIRECTORIES(\${GTEST_INCLUDE_DIRS})
-    SET(THIRD_PARTY_LIBS 
-      \${THIRD_PARTY_LIBS}
-      \${GTEST_LIBRARIES}})
+    SET(TEST_LIBS
+    \${GTEST_BOTH_LIBRARIES}
+    \${CMAKE_THREAD_LIBS_INIT})
     ADD_SUBDIRECTORY(test)
   ENDIF()
   find_package(OpenCV)

@@ -5,7 +5,7 @@
 # @name: cmakelists.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2018-01-31 13:47:34
-# @last_modified_date: 2019-01-11 14:48:33
+# @last_modified_date: 2019-01-11 16:11:22
 # @description: TODO
 #---***********************************************---
 
@@ -34,8 +34,9 @@ FOREACH(EXAMPLE \${EXAMPLES})
   ADD_EXECUTABLE(\${MY_TARGET} \${EXAMPLE})
   TARGET_LINK_LIBRARIES(\${MY_TARGET}
     $PROJECT_NAME
-    \${GTEST_BOTH_LIBRARIES}
-    \${CMAKE_THREAD_LIBS_INIT})
+    \${THIRD_PARTY_LIBS}
+    \${TEST_LIBS}
+    )
   ADD_TEST(\${MY_TARGET} \${EXECUTABLE_OUTPUT_PATH}/\${MY_TARGET})
 ENDFOREACH()
 EOF
