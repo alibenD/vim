@@ -74,12 +74,18 @@
     let g:enable_ycm_at_startup = 1
     let g:ycm_python_binary_path = 'python3'
     " after 2 chars complete
-    let g:ycm_min_num_identifier_candidate_chars = 2
+    let g:ycm_min_num_identifier_candidate_chars = 0
     let g:ycm_enable_diagnostic_signs = 0
     let g:ycm_enable_diagnostic_highlighting = 0
     let g:ycm_confirm_extra_conf = 0
     let g:ycm_cache_omnifunc=0
     let g:ycm_server_keep_logfiles = 1
+    "let g:ycm_complete_in_strings = 1
+    "let g:ycm_autoclose_preview_window_after_completion=1
+    "let g:ycm_seed_identifiers_with_syntax=1
+"是"否在注释中也开启补全"
+    "let g:ycm_complete_in_comments=1
+    "let g:ycm_collect_identifiers_from_comments_and_strings = 0
 
     "--pathogen setting--
     "execute pathogen#infect()
@@ -191,19 +197,24 @@ nnoremap gj j
 map <c-j> <c-x>   " map 语句
 map <c-k> <c-a>   " 设置键盘映射
 
+" YCM jump definition
+nnoremap <leader>je :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>jf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
 
 "--NERDTree--
 map <C-n> :NERDTreeToggle<CR>
   "---Shortcut for Buff switch---
-  map <C-1> :b 1<CR>
-  map <C-2> :b 2<CR>
-  map <C-3> :b 3<CR>
-  map <C-4> :b 4<CR>
-  map <C-5> :b 5<CR>
-  map <C-6> :b 6<CR>
-  map <C-7> :b 7<CR>
-  map <C-8> :b 8<CR>
-  map <C-9> :b 9<CR>
+  nnoremap <C-1> :b 1<CR>
+  nnoremap <C-2> :b 2<CR>
+  nnoremap <C-b> :b 3<CR>
+  nnoremap <C-4> :b 4<CR>
+  nnoremap <C-5> :b 5<CR>
+  nnoremap <C-6> :b 6<CR>
+  nnoremap <C-7> :b 7<CR>
+  nnoremap <C-8> :b 8<CR>
+  nnoremap <C-9> :b 9<CR>
 
 "---Shortcut for  Update Modified Time---
 map <C-u> :call UpdateModifiedDate()<CR>

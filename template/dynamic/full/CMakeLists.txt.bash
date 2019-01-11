@@ -5,7 +5,7 @@
 # @name: cmakelists.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2018-01-31 13:47:34
-# @last_modified_date: 2018-11-20 16:50:10
+# @last_modified_date: 2019-01-11 14:54:12
 # @description: TODO
 #---***********************************************---
 
@@ -40,16 +40,18 @@ project(${PROJECT_NAME})
     SET(CMAKE_BUILD_TYPE RELEASE)
   ENDIF()
 
+  OPTION(BUILD_GTESTS "Build google test cases" ON)
+
   SET(CMAKE_VERBOSE_MAKEFILE OFF)
   SET(CMAKE_CXX_STANDARD 11)
-  SET(CMAKE_CXX_FLAGS "\${CMAKE_CXX_FLAGS} -Wall -Werror -std=c++14 -Wextra -Wno-deprecated-register -Wno-deprecated-declarations -Wno-unused-private-field -Wno-unused-parameter -Qunused-arguments -fcolor-diagnostics -ftemplate-backtrace-limit=0")
+  SET(CMAKE_CXX_FLAGS "\${CMAKE_CXX_FLAGS} -Wall -Werror -std=c++14 -Wextra -Wno-deprecated-register -Wno-deprecated-declarations -Wno-unused-private-field -Wno-unused-parameter -Wno-unused-variable -Qunused-arguments -fcolor-diagnostics -ftemplate-backtrace-limit=0")
   #SET(CMAKE_CXX_FLAGS "\${CMAKE_CXX_FLAGS} -Wall -Werror -std=c++14 -Wextra -Wno-deprecated-register -Wno-deprecated-declarations -Qunused-arguments -fcolor-diagnostics -ftemplate-backtrace-limit=0")
   # Cross-platform check
   IF("\${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
     SET(CMAKE_CXX_FLAGS_DEBUG "\${CMAKE_CXX_FLAGS} -O0 -g")
-    SET(CMAKE_CXX_FLAGS_RELEASE "\${CMAKE_CXX_FLAGS} -O3")
+    SET(CMAKE_CXX_FLAGS_RELEASE "\${CMAKE_CXX_FLAGS} -O3 -march=native")
   ELSEIF(CMAKE_HOST_APPLE)
-    SET(CMAKE_CXX_FLAGS_RELEASE "\${CMAKE_CXX_FLAGS} -O3")
+    SET(CMAKE_CXX_FLAGS_RELEASE "\${CMAKE_CXX_FLAGS} -O3 -march=native")
     SET(CMAKE_CXX_FLAGS_DEBUG "\${CMAKE_CXX_FLAGS} -O0 -g")
   ELSEIF("\${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
     SET(CMAKE_CXX_FLAGS_DEBUG "-O0 -g")
@@ -61,6 +63,9 @@ project(${PROJECT_NAME})
     ADD_DEFINITION("-D PROJECT_CORE_EXPORTS")
   ENDIF()
 
+  SET(CMAKE_MACOSX_RPATH 1)
+  set(CMAKE_SKIP_BUILD_RPATH FALSE)                 # Compile with RPATH
+  set(CMAKE_BUILD_WITH_INSTALL_RPATH FALSE)
   SET(CMAKE_INSTALL_RPATH "\${CMAKE_INSTALL_PREFIX}/lib")
   SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
   SET(EXECUTABLE_OUTPUT_PATH \${PROJECT_SOURCE_DIR}/bin)
@@ -75,6 +80,16 @@ project(${PROJECT_NAME})
   LIST(APPEND CMAKE_MODULE_PATH \${PROJECT_SOURCE_DIR}/cmake_modules)
 # Find *Config.cmake
   # Example: find_package(OpenCV REQUIRED)
+  IF(BUILD_GTESTS)
+    ENABLE_TESTING()
+    find_package(GTEST REQUIRED)
+    find_package(Threads REQUIRED)
+    INCLUDE_DIRECTORIES(\${GTEST_INCLUDE_DIRS})
+    SET(THIRD_PARTY_LIBS 
+      \${THIRD_PARTY_LIBS}
+      \${GTEST_LIBRARIES}})
+    ADD_SUBDIRECTORY(test)
+  ENDIF()
   find_package(OpenCV)
   find_package(Eigen3)
 
@@ -93,6 +108,7 @@ project(${PROJECT_NAME})
   LINK_DIRECTORIES(\${PROJECT_SOURCE_DIR}/lib)
 
   SET( THIRD_PARTY_LIBS
+    \${THIRD_PARTY_LIBS}
     \${OpenCV_LIBS}
   )
 

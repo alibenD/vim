@@ -53,9 +53,15 @@ flags = [
 '-isystem',
 '/Users/aliben/dev/env/include',
 '-isystem',
+'/Users/aliben/dev/env/include/opencv4',
+'-isystem',
 '/Users/aliben/dev/env/homebrew/include',
 '-isystem',
+'/Users/aliben/dev/env/homebrew/include/eigen3',
+'-isystem',
 '.',
+'-I./include'
+'-I../include'
 '-isystem',
 '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1',
 '-isystem',
