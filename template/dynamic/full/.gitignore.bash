@@ -5,7 +5,7 @@
 # @name: gitignore.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-11-01 18:18:27
-# @last_modified_date: 2018-11-20 15:45:57
+# @last_modified_date: 2019-01-11 16:50:52
 # @description: TODO
 #---***********************************************---
 
@@ -32,6 +32,7 @@ build
 bin
 lib
 doc
+log
 *.swo
 *.swp
 *.o

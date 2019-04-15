@@ -23,12 +23,15 @@
       Plug 'tpope/vim-git'
       Plug 'tpope/vim-fugitive'
       Plug 'gregsexton/gitv'
-      Plug 'terryma/vim-smooth-scroll'
+      "Plug 'terryma/vim-smooth-scroll'
       "Plug 'w0rp/ale'
       Plug 'octol/vim-cpp-enhanced-highlight'
       Plug 'nathanaelkane/vim-indent-guides'
       Plug 'nickhutchinson/vim-cmake-syntax'
     call plug#end()
+
+    "Set FZF
+    set rtp+=/Users/aliben/dev/env/homebrew/opt/fzf
 
     " ALE setup
     "let g:ale_completion_enable=1
@@ -80,12 +83,12 @@
     let g:ycm_confirm_extra_conf = 0
     let g:ycm_cache_omnifunc=0
     let g:ycm_server_keep_logfiles = 1
-    "let g:ycm_complete_in_strings = 1
-    "let g:ycm_autoclose_preview_window_after_completion=1
-    "let g:ycm_seed_identifiers_with_syntax=1
+    let g:ycm_complete_in_strings = 1
+    let g:ycm_autoclose_preview_window_after_completion=1
+    let g:ycm_seed_identifiers_with_syntax=1
 "是"否在注释中也开启补全"
-    "let g:ycm_complete_in_comments=1
-    "let g:ycm_collect_identifiers_from_comments_and_strings = 0
+    let g:ycm_complete_in_comments=1
+    let g:ycm_collect_identifiers_from_comments_and_strings = 0
 
     "--pathogen setting--
     "execute pathogen#infect()
@@ -205,19 +208,20 @@ nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 "--NERDTree--
 map <C-n> :NERDTreeToggle<CR>
-  "---Shortcut for Buff switch---
-  nnoremap <C-1> :b 1<CR>
-  nnoremap <C-2> :b 2<CR>
-  nnoremap <C-b> :b 3<CR>
-  nnoremap <C-4> :b 4<CR>
-  nnoremap <C-5> :b 5<CR>
-  nnoremap <C-6> :b 6<CR>
-  nnoremap <C-7> :b 7<CR>
-  nnoremap <C-8> :b 8<CR>
-  nnoremap <C-9> :b 9<CR>
+  "---Shortcut for Buff switch--- Unavailable, cause C-Number cannot be
+  "captured
+  "nnoremap <C-1> :b 1<CR>
+  "nnoremap <C-2> :b 2<CR>
+  "nnoremap <C-b> :b 3<CR>
+  "nnoremap <C-4> :b 4<CR>
+  "nnoremap <C-5> :b 5<CR>
+  "nnoremap <C-6> :b 6<CR>
+  "nnoremap <C-7> :b 7<CR>
+  "nnoremap <C-8> :b 8<CR>
+  "nnoremap <C-9> :b 9<CR>
 
 "---Shortcut for  Update Modified Time---
-map <C-u> :call UpdateModifiedDate()<CR>
+"map <C-u> :call UpdateModifiedDate()<CR>
 
 "-miniBuff--
 let g:miniBufExplMaxSize = 2
@@ -233,12 +237,12 @@ let g:miniBufExplMaxSize = 2
 nmap <C-t> :TagbarToggle<CR>
 
 "--omnicppcomplete setting--
-filetype plugin indent on
-set completeopt=longest,menu
-let OmniCpp_NamespaceSearch = 2     " search namespaces in the current buffer   and in included files
-let OmniCpp_ShowPrototypeInAbbr = 1 " 显示函数参数列表
-let OmniCpp_MayCompleteScope = 1    " 输入 :: 后自动补全
-let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]"]"
+"filetype plugin indent on
+"set completeopt=longest,menu
+"let OmniCpp_NamespaceSearch = 2     " search namespaces in the current buffer   and in included files
+"let OmniCpp_ShowPrototypeInAbbr = 1 " 显示函数参数列表
+"let OmniCpp_MayCompleteScope = 1    " 输入 :: 后自动补全
+"let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]"]"
 
 "--ctags for omnicppcomplete
 set tags+=./tags;,~/.vim/tags/cpp_src/tags,~/.vim/systags,tags
