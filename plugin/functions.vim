@@ -60,7 +60,7 @@ let s:originPoint = [0,3,0,0]
     elseif expand("%:e") == 'xml'
       call setline(lineNumberSearch, '* @last_modified_date: ' . currentTime)
     elseif expand("%:e") == 'launch'
-      call setline(lineNumberSearch, '* @last_modified_date: ' . currentTime)
+      call setline(lineNumberSearch, '  * @last_modified_date: ' . currentTime)
     elseif expand("%:e") == 'urdf'
       call setline(lineNumberSearch, '  * @last_modified_date: ' . currentTime)
     endif
