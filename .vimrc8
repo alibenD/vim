@@ -253,7 +253,7 @@ au BufRead,BufNewFile *.launch,*.xml,*.xacro,*.world,*.urdf set filetype=xml
 au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/plugin/yaml.vim
 autocmd BufRead,BufNewFile *.bin,*.img exec ":%!xxd"
 autocmd BufWritePre *.h,*.hh,*.hpp,*.c,*.cc,*.cpp,CMakeLists.txt,*.yml call UpdateModifiedDate()
-autocmd BufWritePre *.bash,*.sh call UpdateModifiedDate()
+autocmd BufWritePre *.bash,*.sh,*.launch,*.yaml call UpdateModifiedDate()
 
 " Added by Aliben for auto importing template with *.cc *.cpp *.h *.hh *.c *.cxx
 "------------- There are some dynamic template using bash to generate
