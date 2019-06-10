@@ -5,7 +5,7 @@
 # @name: gitignore.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-11-01 18:18:27
-# @last_modified_date: 2019-01-11 16:50:52
+# @last_modified_date: 2019-06-10 10:10:07
 # @description: TODO
 #---***********************************************---
 
@@ -37,8 +37,10 @@ log
 *.swp
 *.o
 *.a
+*.out
 .idea
 .DS_Store
+.vscode
 
 
 #DON NOT IGNORE LIST
