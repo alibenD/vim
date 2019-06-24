@@ -63,6 +63,8 @@ let s:originPoint = [0,3,0,0]
       call setline(lineNumberSearch, '  * @last_modified_date: ' . currentTime)
     elseif expand("%:e") == 'urdf'
       call setline(lineNumberSearch, '  * @last_modified_date: ' . currentTime)
+    else
+      call setline(lineNumberSearch, '# @last_modified_date: ' . currentTime)
     endif
     call setpos(".", cursorCurrent)
   endfunction
