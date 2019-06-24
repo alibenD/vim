@@ -22,6 +22,7 @@
       Plug 'godlygeek/tabular'
       Plug 'tpope/vim-git'
       Plug 'tpope/vim-fugitive'
+      Plug 'tpope/vim-commentary'
       Plug 'gregsexton/gitv'
       "Plug 'terryma/vim-smooth-scroll'
       "Plug 'w0rp/ale'
