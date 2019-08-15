@@ -264,7 +264,8 @@ autocmd BufWritePre *.bash,*.sh,*.launch,*.yaml,*.urdf call UpdateModifiedDate()
 
 " Set global variable for dynamic template
 let g:enable_template=1
-let g:template_dir="$HOME/.vim/template"
+"let g:template_dir="$HOME/.vim/template"
+let g:template_dir="$SETTING_PATH/vim_template"
 let g:C_SourceCodeExtensions = '' " Cancel plugin c.vim
   " echoFunc
 let g:EchoFuncShowOnStatus = 1

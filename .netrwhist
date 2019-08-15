@@ -1,3 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/etc/apt/sources.list.d'
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/Users/aliben/project/CCpp/design_pattern/include/design_pattern'
