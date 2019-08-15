@@ -4,7 +4,7 @@
 # @file: auto_install.sh
 # @author: aliben.develop@gmail.com
 # @created_date: 2018-11-20 21:08:35
-# @last_modified_date: 2019-05-24 09:28:32
+# @last_modified_date: 2019-08-15 11:01:00
 # @brief: TODO
 # @details: TODO
 #---***********************************************---
@@ -24,7 +24,7 @@ fi
 if [ -L "$HOME/.vimrc" ]; then
   mv $HOME/.vimrc $HOME/.vimrc_old
 fi
-ln -s $HOME/.vim/.vimrc8 $HOME/.vimrc
+ln -s `pwd`/.vimrc8 $HOME/.vimrc
 vim +PlugInstall +qall
 cd bundle/YouCompleteMe/ && git submodule update --init --recursive
 cd ~/.vim
