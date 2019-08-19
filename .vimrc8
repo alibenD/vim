@@ -32,7 +32,7 @@
     call plug#end()
 
     "Set FZF
-    set rtp+=/Users/aliben/dev/env/homebrew/opt/fzf
+    "set rtp+=/Users/aliben/dev/env/homebrew/opt/fzf
 
     " ALE setup
     "let g:ale_completion_enable=1
