@@ -4,7 +4,7 @@
 # @file: auto_install.sh
 # @author: aliben.develop@gmail.com
 # @created_date: 2018-11-20 21:08:35
-# @last_modified_date: 2019-08-15 14:13:13
+# @last_modified_date: 2019-12-08 21:46:40
 # @brief: TODO
 # @details: TODO
 #---***********************************************---
@@ -21,10 +21,23 @@ if [ -f "$HOME/.vimrc" ]; then
   mv $HOME/.vimrc $HOME/.vimrc_old
 fi
 
+if [ -d "$HOME/.vim" ]; then
+  mv $HOME/.vim $HOME/.vim_old
+fi
+
+if [ -L "$HOME/.vim" ]; then
+  mv $HOME/.vim $HOME/.vim_old
+fi
+
+if [ -f "$HOME/.vim" ]; then
+  mv $HOME/.vim $HOME/.vim_old
+fi
+
 if [ -L "$HOME/.vimrc" ]; then
   mv $HOME/.vimrc $HOME/.vimrc_old
 fi
 ln -s $SETTING_PATH/vim/.vimrc8 $HOME/.vimrc
+ln -s #SETTING_PATH/vim $HOME/.vim
 vim +PlugInstall +qall
 cd bundle/YouCompleteMe/ && git submodule update --init --recursive
 cd ~/.vim
