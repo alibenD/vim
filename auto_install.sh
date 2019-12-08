@@ -37,7 +37,7 @@ if [ -L "$HOME/.vimrc" ]; then
   mv $HOME/.vimrc $HOME/.vimrc_old
 fi
 ln -s $SETTING_PATH/vim/.vimrc8 $HOME/.vimrc
-ln -s #SETTING_PATH/vim $HOME/.vim
+ln -s $SETTING_PATH/vim $HOME/.vim
 vim +PlugInstall +qall
 cd bundle/YouCompleteMe/ && git submodule update --init --recursive
 cd ~/.vim
