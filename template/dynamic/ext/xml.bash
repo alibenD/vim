@@ -4,7 +4,7 @@
 # @name: xml.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-23 00:01:59
-# @last_modified_date: 2018-10-31 11:23:20
+# @last_modified_date: 2020-02-27 11:24:09
 # @brief: Generate a template for new bash file
 #---***********************************************---
 
@@ -20,7 +20,7 @@ cat << EOF
   * @date: $CREATED_YEAR
   * @file: ${1##*/}
   * @version: v0.0.1
-  * @author: aliben.develop@gmail.com
+  * @author: ${DEVELOPER_EMAIL}
   * @create_date: $CREATED_TIME
   * @last_modified_date: NO_LAST_MODIFIED_DATE
   * @brief: TODO

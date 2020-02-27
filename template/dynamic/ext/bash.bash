@@ -4,7 +4,7 @@
 # @name: bashnew.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-21 17:42:35
-# @last_modified_date: 2018-07-31 22:36:41
+# @last_modified_date: 2020-02-27 11:21:44
 # @brief: Generate a template for new bash file
 #---***********************************************---
 
@@ -21,7 +21,7 @@ cat << EOF
 #---Automatically Generated from template 'bash' wrote by @aliben---
 # @Copyright (C) $CREATED_YEAR All rights reserved.
 # @file: ${1##*/}
-# @author: aliben.develop@gmail.com
+# @author: ${DEVELOPER_EMAIL}
 # @created_date: $CREATED_TIME
 # @last_modified_date: NO_LAST_MODIFIED_DATE
 # @brief: TODO

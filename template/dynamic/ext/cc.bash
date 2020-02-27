@@ -4,7 +4,7 @@
 # @name: cc.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-23 00:01:59
-# @last_modified_date: 2018-07-31 22:37:00
+# @last_modified_date: 2020-02-27 11:22:27
 # @brief: Generate a template for new bash file
 #---***********************************************---
 
@@ -20,7 +20,7 @@ cat << EOF
   * @date: $CREATED_YEAR
   * @file: ${1##*/}
   * @version: v0.0.1
-  * @author: aliben.develop@gmail.com
+  * @author: ${DEVELOPER_EMAIL}
   * @create_date: $CREATED_TIME
   * @last_modified_date: NO_LAST_MODIFIED_DATE
   * @brief: TODO

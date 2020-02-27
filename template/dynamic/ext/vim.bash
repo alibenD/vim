@@ -4,7 +4,7 @@
 # @name: vim.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-21 18:10:22
-# @last_modified_date: 2018-07-31 22:38:19
+# @last_modified_date: 2020-02-27 11:24:36
 # @brief: TODO
 #---***********************************************---
 
