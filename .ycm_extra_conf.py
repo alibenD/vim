@@ -60,8 +60,8 @@ flags = [
 '/Users/aliben/dev/env/homebrew/include/eigen3',
 '-isystem',
 '.',
-'-I./include'
-'-I../include'
+'-I./include',
+'-I../include',
 '-isystem',
 '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1',
 '-isystem',

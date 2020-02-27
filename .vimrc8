@@ -90,10 +90,11 @@
     let g:ycm_python_binary_path = 'python3'
     " after 2 chars complete
     let g:ycm_min_num_identifier_candidate_chars = 0
-    let g:ycm_enable_diagnostic_signs = 0
-    let g:ycm_enable_diagnostic_highlighting = 0
+    let g:ycm_enable_diagnostic_signs = 1
+    let g:ycm_enable_diagnostic_highlighting = 1
     let g:ycm_confirm_extra_conf = 0
     let g:ycm_cache_omnifunc=0
+    "let g:ycm_show_diagnostics_ui = 1
     let g:ycm_server_keep_logfiles = 1
     let g:ycm_complete_in_strings = 1
     let g:ycm_autoclose_preview_window_after_completion=1
@@ -101,6 +102,10 @@
 "是"否在注释中也开启补全"
     let g:ycm_complete_in_comments=1
     let g:ycm_collect_identifiers_from_comments_and_strings = 0
+    let g:ycm_semantic_triggers =  {
+          \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
+          \ 'cs,lua,javascript': ['re!\w{2}'],
+          \ }
 
     "--pathogen setting--
     "execute pathogen#infect()
@@ -258,6 +263,8 @@ nmap <C-t> :TagbarToggle<CR>
 
 "--ctags for omnicppcomplete
 set tags+=./tags;,~/.vim/tags/cpp_src/tags,~/.vim/systags,tags
+set path+=/Users/aliben/project/C/**,./include/**,../include**3,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/**3
+
 
 " Added by Aliben for highlighting in CMakelists.txt
 au BufRead,BufNewFile cmakelists.txt,Cmakelist.txt,CMakelists.txt,*.cmake,CMakeLists.txt set filetype=cmake
