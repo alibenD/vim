@@ -30,6 +30,7 @@
       Plug 'nathanaelkane/vim-indent-guides'
       Plug 'nickhutchinson/vim-cmake-syntax'
       Plug 'skywind3000/asyncrun.vim'
+      Plug 'wannesm/wmgraphviz.vim'
     call plug#end()
 
     " For AsyncRun
@@ -251,7 +252,7 @@ let g:miniBufExplMaxSize = 2
 "map <C-t> :TlistToggle<CR>
 
 " Tagbar
-nmap <C-t> :TagbarToggle<CR>
+nmap <s-t> :TagbarToggle<CR>
 
 "--omnicppcomplete setting--
 "filetype plugin indent on
@@ -287,3 +288,22 @@ let g:template_dir="$SETTING_PATH/vim_template"
 let g:C_SourceCodeExtensions = '' " Cancel plugin c.vim
   " echoFunc
 let g:EchoFuncShowOnStatus = 1
+
+autocmd bufnewfile *.dot call Headerdot()
+function Headerdot()
+   call setline(1,"//usr/bin/dot")
+   call append(1,"digraph G")
+   call append(2,"{")
+   call append(3,"")
+   call append(4,"}")
+   normal 4G
+endf
+ 
+"graphviz
+let g:WMGraphviz_dot = "dot"
+let g:WMGraphviz_output = "png"
+let g:WMGraphviz_viewer = "open"
+let g:WMGraphviz_shelloptions = ""
+
+
+nmap <C-a> :GraphvizShow<CR>
