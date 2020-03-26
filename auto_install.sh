@@ -4,7 +4,7 @@
 # @file: auto_install.sh
 # @author: aliben.develop@gmail.com
 # @created_date: 2018-11-20 21:08:35
-# @last_modified_date: 2019-12-08 21:46:40
+# @last_modified_date: 2020-03-26 22:12:23
 # @brief: TODO
 # @details: TODO
 #---***********************************************---
@@ -41,5 +41,5 @@ ln -s $SETTING_PATH/vim $HOME/.vim
 vim +PlugInstall +qall
 cd bundle/YouCompleteMe/ && git submodule update --init --recursive
 cd ~/.vim
-python ./bundle/YouCompleteMe/install.py --clang-completer
+python3 ./bundle/YouCompleteMe/install.py --clang-completer
 set +x
