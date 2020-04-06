@@ -17,7 +17,7 @@
       Plug 'bling/vim-airline'
       Plug 'Valloric/YouCompleteMe'
       Plug 'majutsushi/tagbar'
-      Plug 'junegunn/fzf.vim'
+      Plug 'junegunn/fzf.vim', { 'do': { -> fzf#install() } }
       Plug 'mhinz/vim-signify'
       Plug 'godlygeek/tabular'
       Plug 'tpope/vim-git'
@@ -45,6 +45,7 @@
 
     "Set FZF
     "set rtp+=/Users/aliben/dev/env/homebrew/opt/fzf
+    set rtp+=$DEV_ENV/homebrew/opt/fzf
 
     " ALE setup
     "let g:ale_completion_enable=1
