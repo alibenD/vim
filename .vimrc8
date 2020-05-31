@@ -307,4 +307,4 @@ let g:WMGraphviz_viewer = "open"
 let g:WMGraphviz_shelloptions = ""
 
 
-nmap <C-a> :GraphvizShow<CR>
+"nmap <C-a> :GraphvizShow<CR>
