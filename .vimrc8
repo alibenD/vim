@@ -1,6 +1,7 @@
     " This line should not be removed as it ensures that various options are
     " properly set to work with the Vim-related packages available in Debian.
     runtime! debian.vim
+set encoding=UTF-8
 
     " Uncomment the next line to make Vim more Vi-compatible
     " NOTE: debian.vim sets 'nocompatible'. Setting 'compatible' changes numerous
@@ -24,13 +25,25 @@
       Plug 'tpope/vim-fugitive'
       Plug 'tpope/vim-commentary'
       Plug 'gregsexton/gitv'
-      "Plug 'terryma/vim-smooth-scroll'
+      Plug 'terryma/vim-smooth-scroll'
       "Plug 'w0rp/ale'
       Plug 'octol/vim-cpp-enhanced-highlight'
       Plug 'nathanaelkane/vim-indent-guides'
       Plug 'nickhutchinson/vim-cmake-syntax'
       Plug 'skywind3000/asyncrun.vim'
       Plug 'wannesm/wmgraphviz.vim'
+      Plug 'chxuan/cpp-mode'
+      Plug 'chxuan/cpp-mode'
+      Plug 'chxuan/vim-edit'
+      Plug 'chxuan/change-colorscheme'
+      Plug 'chxuan/prepare-code'
+      Plug 'chxuan/vim-buffer'
+      Plug 'chxuan/vimplus-startify'
+      "Plug 'chxuan/tagbar'
+      Plug 'ryanoasis/vim-devicons'
+      Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+      Plug 'Xuyuanp/nerdtree-git-plugin'
+
     call plug#end()
 
     " For AsyncRun
@@ -305,6 +318,5 @@ let g:WMGraphviz_dot = "dot"
 let g:WMGraphviz_output = "png"
 let g:WMGraphviz_viewer = "open"
 let g:WMGraphviz_shelloptions = ""
-
 
 "nmap <C-a> :GraphvizShow<CR>
