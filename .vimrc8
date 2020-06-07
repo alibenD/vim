@@ -10,12 +10,12 @@ set encoding=UTF-8
 
     " Setup for vim-plug
     call plug#begin('~/.vim/bundle')
-      Plug 'vim-scripts/echofunc.vim'
+      "Plug 'vim-scripts/echofunc.vim'
       Plug 'vim-scripts/Auto-Pairs'
       Plug 'scrooloose/nerdtree'
       Plug 'fholgado/minibufexpl.vim'
       Plug 'ervandew/supertab'
-      Plug 'bling/vim-airline'
+      Plug 'vim-airline/vim-airline'
       Plug 'Valloric/YouCompleteMe'
       Plug 'majutsushi/tagbar'
       Plug 'junegunn/fzf.vim', { 'do': { -> fzf#install() } }
@@ -23,6 +23,7 @@ set encoding=UTF-8
       Plug 'godlygeek/tabular'
       Plug 'tpope/vim-git'
       Plug 'tpope/vim-fugitive'
+      Plug 'junegunn/gv.vim'
       Plug 'tpope/vim-commentary'
       Plug 'gregsexton/gitv'
       Plug 'terryma/vim-smooth-scroll'
@@ -33,16 +34,15 @@ set encoding=UTF-8
       Plug 'skywind3000/asyncrun.vim'
       Plug 'wannesm/wmgraphviz.vim'
       Plug 'chxuan/cpp-mode'
-      Plug 'chxuan/cpp-mode'
       Plug 'chxuan/vim-edit'
       Plug 'chxuan/change-colorscheme'
-      Plug 'chxuan/prepare-code'
       Plug 'chxuan/vim-buffer'
       Plug 'chxuan/vimplus-startify'
       "Plug 'chxuan/tagbar'
       Plug 'ryanoasis/vim-devicons'
       Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
       Plug 'Xuyuanp/nerdtree-git-plugin'
+      "Plug 'Shougo/echodoc.vim'
 
     call plug#end()
 
@@ -113,14 +113,17 @@ set encoding=UTF-8
     let g:ycm_server_keep_logfiles = 1
     let g:ycm_complete_in_strings = 1
     let g:ycm_autoclose_preview_window_after_completion=1
-    let g:ycm_seed_identifiers_with_syntax=1
-"是"否在注释中也开启补全"
+    let g:ycm_seed_identifiers_with_syntax=1 "是否在注释中也开启补全
     let g:ycm_complete_in_comments=1
+    let g:ycm_collect_identifiers_from_tag_files = 1
     let g:ycm_collect_identifiers_from_comments_and_strings = 0
     let g:ycm_semantic_triggers =  {
           \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
           \ 'cs,lua,javascript': ['re!\w{2}'],
           \ }
+    let g:ycm_error_symbol='>>'
+" 警告标识符
+    let g:ycm_warning_symbol='>*'
 
     "--pathogen setting--
     "execute pathogen#infect()
@@ -224,6 +227,9 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+" Key mapping
+let mapleader=","
+
 nnoremap k gk
 nnoremap gk k
 nnoremap j gj
@@ -320,3 +326,28 @@ let g:WMGraphviz_viewer = "open"
 let g:WMGraphviz_shelloptions = ""
 
 "nmap <C-a> :GraphvizShow<CR>
+"
+
+" vim-buffer settings
+  nnoremap <leader>bp :PreviousBuffer<cr>
+  nnoremap <leader>bn :NextBuffer<cr>
+  nnoremap <leader>bc :CloseCurrentBuffer<cr>
+  nnoremap <leader>bd :BufOnly<cr>
+
+" for airline
+let g:airline_powerline_fonts = 1
+
+" for nerdtree-git-plugin
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
+

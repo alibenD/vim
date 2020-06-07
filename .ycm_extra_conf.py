@@ -47,8 +47,6 @@ flags = [
 '-isystem',
 '/usr/local/include',
 '-isystem',
-'/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1',
-'-isystem',
 '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include',
 '-isystem',
 '/Users/aliben/dev/env/include',
@@ -58,6 +56,8 @@ flags = [
 '/Users/aliben/dev/env/homebrew/include',
 '-isystem',
 '/Users/aliben/dev/env/homebrew/include/eigen3',
+'-I/Users/aliben/project/C/**,'
+'-I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include'
 '-isystem',
 '.',
 '-I./include',
