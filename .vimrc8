@@ -284,7 +284,7 @@ nmap <s-t> :TagbarToggle<CR>
 
 "--ctags for omnicppcomplete
 set tags+=./tags;,~/.vim/tags/cpp_src/tags,~/.vim/systags,tags
-set path+=/Users/aliben/project/C/**,./include/**,../include**3,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/**3
+set path+=/Users/aliben/project/C/**,./include/**,../include**3,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/**3,/Users/aliben/project/learning_os/**3
 
 
 " Added by Aliben for highlighting in CMakelists.txt
