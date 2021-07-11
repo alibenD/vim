@@ -338,7 +338,7 @@ let g:WMGraphviz_shelloptions = ""
 let g:airline_powerline_fonts = 1
 
 " for nerdtree-git-plugin
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",
