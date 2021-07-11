@@ -57,7 +57,7 @@ set encoding=UTF-8
     nnoremap <F10> :call asyncrun#quickfix_toggle(6)<cr>
 
     "Set FZF
-    "set rtp+=/Users/aliben/dev/env/homebrew/opt/fzf
+    "set rtp+=/Users/aliben/.local/homebrew/opt/fzf
     set rtp+=$DEV_ENV/homebrew/opt/fzf
 
     " ALE setup

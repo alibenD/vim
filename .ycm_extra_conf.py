@@ -49,13 +49,13 @@ flags = [
 '-isystem',
 '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include',
 '-isystem',
-'/Users/aliben/dev/env/include',
+'/Users/aliben/.local/include',
 '-isystem',
-'/Users/aliben/dev/env/include/opencv4',
+'/Users/aliben/.local/include/opencv4',
 '-isystem',
-'/Users/aliben/dev/env/homebrew/include',
+'/Users/aliben/.local/homebrew/include',
 '-isystem',
-'/Users/aliben/dev/env/homebrew/include/eigen3',
+'/Users/aliben/.local/homebrew/include/eigen3',
 '-I/Users/aliben/project/C/**,'
 '-I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include'
 '-isystem',
