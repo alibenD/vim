@@ -18,7 +18,8 @@ set encoding=UTF-8
       Plug 'vim-airline/vim-airline'
       Plug 'Valloric/YouCompleteMe'
       Plug 'majutsushi/tagbar'
-      Plug 'junegunn/fzf.vim', { 'do': { -> fzf#install() } }
+      Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+      Plug 'junegunn/fzf.vim',
       Plug 'mhinz/vim-signify'
       Plug 'godlygeek/tabular'
       Plug 'tpope/vim-git'
@@ -59,6 +60,7 @@ set encoding=UTF-8
     "Set FZF
     "set rtp+=/Users/aliben/.local/homebrew/opt/fzf
     set rtp+=$DEV_ENV/homebrew/opt/fzf
+    set rtp+=$HOME/.fzf
 
     " ALE setup
     "let g:ale_completion_enable=1
@@ -284,7 +286,7 @@ nmap <s-t> :TagbarToggle<CR>
 
 "--ctags for omnicppcomplete
 set tags+=./tags;,~/.vim/tags/cpp_src/tags,~/.vim/systags,tags
-set path+=/Users/aliben/project/C/**,./include/**,../include**3,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/**3,/Users/aliben/project/learning_os/**3
+set path+=/Users/aliben/project/C/**,./include/**,../include**3,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/**3,/Users/aliben/project/learning_os/**3,/usr/include/**3,/usr/local/include/**3,/home/aliben/env_ws/ros2_galactic/src/**5
 
 
 " Added by Aliben for highlighting in CMakelists.txt
