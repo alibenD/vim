@@ -43,6 +43,7 @@ set encoding=UTF-8
       Plug 'ryanoasis/vim-devicons'
       Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
       Plug 'Xuyuanp/nerdtree-git-plugin'
+      Plug 'othree/xml.vim'
       "Plug 'Shougo/echodoc.vim'
 
     call plug#end()
