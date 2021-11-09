@@ -4,7 +4,7 @@
 # @name: cpp.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-23 01:01:33
-# @last_modified_date: 2020-02-27 11:23:10
+# @last_modified_date: 2021-11-09 23:21:11
 # @brief: Generate a template for a new cpp
 #---***********************************************---
 
@@ -18,7 +18,6 @@ CREATED_YEAR=`date '+%Y'`
 cat << EOF
 /**-----------------------------------------------
   * @Copyright (C) $CREATED_YEAR All rights reserved.
-  * @date: $CREATED_YEAR
   * @file: ${1##*/}
   * @version: v0.0.1
   * @author: ${DEVELOPER_EMAIL}

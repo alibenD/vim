@@ -5,7 +5,7 @@
 # @name: hh.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-23 01:41:17
-# @last_modified_date: 2020-02-27 11:23:43
+# @last_modified_date: 2021-11-09 23:21:27
 # @brief: TODO
 #---***********************************************---
 
@@ -21,7 +21,6 @@ cat << EOF
 #define $HEAD_DEF
 /**-----------------------------------------------
   * @Copyright (C) $CREATED_YEAR All rights reserved.
-  * @date: $CREATED_YEAR
   * @file: ${1##*/}
   * @version: v0.0.1
   * @author: ${DEVELOPER_EMAIL}

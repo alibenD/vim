@@ -4,7 +4,7 @@
 # @name: xml.bash
 # @author: aliben.develop@gmail.com
 # @created_date: 2017-10-23 00:01:59
-# @last_modified_date: 2020-02-27 11:24:09
+# @last_modified_date: 2021-11-09 23:21:45
 # @brief: Generate a template for new bash file
 #---***********************************************---
 
@@ -17,7 +17,6 @@ CREATED_YEAR=`date '+%Y'`
 cat << EOF
 <!--
   * @Copyright (C) $CREATED_YEAR All rights reserved.
-  * @date: $CREATED_YEAR
   * @file: ${1##*/}
   * @version: v0.0.1
   * @author: ${DEVELOPER_EMAIL}
