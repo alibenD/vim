@@ -13,11 +13,13 @@ set encoding=UTF-8
       "Plug 'vim-scripts/echofunc.vim'
       Plug 'vim-scripts/Auto-Pairs'
       Plug 'scrooloose/nerdtree'
-      Plug 'fholgado/minibufexpl.vim'
+      "Plug 'fholgado/minibufexpl.vim'
       Plug 'ervandew/supertab'
       Plug 'vim-airline/vim-airline'
+      Plug 'vim-airline/vim-airline-themes'
       Plug 'Valloric/YouCompleteMe'
       Plug 'majutsushi/tagbar'
+      Plug 'vim-scripts/taglist.vim'
       Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
       Plug 'junegunn/fzf.vim',
       Plug 'mhinz/vim-signify'
@@ -38,8 +40,9 @@ set encoding=UTF-8
       Plug 'chxuan/vim-edit'
       Plug 'chxuan/change-colorscheme'
       Plug 'chxuan/vim-buffer'
-      Plug 'chxuan/vimplus-startify'
+      "Plug 'chxuan/vimplus-startify'
       "Plug 'chxuan/tagbar'
+      Plug 'alibenD/vim-startify'
       Plug 'ryanoasis/vim-devicons'
       Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
       Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -339,6 +342,7 @@ let g:WMGraphviz_shelloptions = ""
 
 " for airline
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " for nerdtree-git-plugin
 let g:NERDTreeGitStatusIndicatorMapCustom = {
@@ -354,3 +358,5 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 
+
+map ; :Files<CR>
