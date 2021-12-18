@@ -299,7 +299,7 @@ au BufRead,BufNewFile cmakelists.txt,Cmakelist.txt,CMakelists.txt,*.cmake,CMakeL
 au BufRead,BufNewFile *.launch,*.xml,*.xacro,*.world,*.urdf set filetype=xml
 au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/plugin/yaml.vim
 autocmd BufRead,BufNewFile *.bin,*.img exec ":%!xxd"
-autocmd BufWritePre *.h,*.hh,*.hpp,*.c,*.cc,*.cpp,CMakeLists.txt,.gitignore,*.yml call UpdateModifiedDate()
+autocmd BufWritePre *.h,*.hh,*.hpp,*.c,*.cc,*.cpp,CMakeLists.txt,.gitignore,*.yml,*.asm call UpdateModifiedDate()
 autocmd BufWritePre *.bash,*.sh,*.launch,*.yaml,*.urdf call UpdateModifiedDate()
 
 " Added by Aliben for auto importing template with *.cc *.cpp *.h *.hh *.c *.cxx
@@ -336,8 +336,15 @@ let g:WMGraphviz_shelloptions = ""
 "
 
 " vim-buffer settings
-  nnoremap <leader>bp :PreviousBuffer<cr>
-  nnoremap <leader>bn :NextBuffer<cr>
+  "nnoremap <leader>bp :PreviousBuffer<cr>
+  "nnoremap <leader>bn :NextBuffer<cr>
+  "nnoremap <leader>bc :CloseCurrentBuffer<cr>
+  "nnoremap <leader>bd :BufOnly<cr>
+  nnoremap <C-left>   :PreviousBuffer<cr>
+  nnoremap <C-right>  :NextBuffer<cr>
+  nnoremap <C-up>     :bfirst<cr>
+  nnoremap <C-down>   :blast<cr>
+
   nnoremap <leader>bc :CloseCurrentBuffer<cr>
   nnoremap <leader>bd :BufOnly<cr>
 
